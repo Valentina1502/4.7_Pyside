@@ -41,15 +41,15 @@ class MainWindow(QWidget):
 
 
     def RadioButtonClicked(self, Rb):
-        info = {
-            'ФИО': 'Новикова Валенина Сергеевна',
-            'Группа': 'ИВТ-б-о-20-1',
-            'Телефон': '8-(988)-755-11-15'
-        }
         self.label.setText(info[Rb.text()])
 
 
 if __name__ == "__main__":
+    info = {
+            'ФИО': 'Новикова Валенина Сергеевна',
+            'Группа': 'ИВТ-б-о-20-1',
+            'Телефон': '8-(988)-755-11-15'
+        }
     app = QApplication(sys.argv)
     window = MainWindow()
     sys.exit(app.exec_())
